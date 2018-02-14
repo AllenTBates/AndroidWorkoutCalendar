@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "245424043560",
+    "firebase_url": "https://workoutcalender-6f740.firebaseio.com",
+    "project_id": "workoutcalender-6f740",
+    "storage_bucket": "workoutcalender-6f740.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245424043560:android:c881e2003b5c8fe1",
+        "android_client_info": {
+          "package_name": "com.example.allen.workoutcalendar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245424043560-bqanf2e5ph06q5sckipn6jtjlbv8k1fu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmuRL4WgO1QX_Wo8TjqL1ByMYme1iee34"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

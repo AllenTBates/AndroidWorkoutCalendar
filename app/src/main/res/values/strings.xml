@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WorkoutCalendar</string>
+    <string name="email">Email</string>
+    <string name="enterEmail">Enter Your Email</string>
+    <string name="sendEmail">Send Email</string>
+    <string name="pass">Password</string>
+    <string name="passAgain">Enter Password Again</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="forgotPass">Forgot Password? Click Here</string>
+</resources>
