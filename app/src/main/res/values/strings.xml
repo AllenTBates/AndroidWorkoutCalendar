@@ -8,4 +8,29 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="forgotPass">Forgot Password? Click Here</string>
+
+    <string name="confirmSignOut">Are you sure you want to sign out?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+    <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="action_account">Account</string>
+    <string name="action_signOut">Sign Out</string>
+    <string name="action_export">Export</string>
+    <string name="action_add">Add</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="title_activity_week">WeekActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="month">Month</string>
+    <string name="week">Week</string>
+    <string name="day">Day</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

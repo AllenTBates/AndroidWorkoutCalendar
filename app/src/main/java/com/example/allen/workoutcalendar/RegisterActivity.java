@@ -34,6 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        setTitle("Register Account");
 
         //Initialize Views
         etEmail = findViewById(R.id.et_register_email);
@@ -102,7 +103,9 @@ public class RegisterActivity extends AppCompatActivity {
                             }catch(FirebaseAuthUserCollisionException e) {
                                 Toast.makeText(RegisterActivity.this,
                                         "User already exists", Toast.LENGTH_SHORT).show();
-                            }catch(Exception e){
+                            }catch(NullPointerException e){
+                                Log.d(TAG, "Null Pointer Exception");
+                            } catch(Exception e){
                                 Toast.makeText(RegisterActivity.this,
                                         "Authentication failed.", Toast.LENGTH_SHORT).show();
                             }

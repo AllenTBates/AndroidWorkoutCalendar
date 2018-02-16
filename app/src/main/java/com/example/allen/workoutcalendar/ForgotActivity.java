@@ -22,11 +22,13 @@ public class ForgotActivity extends AppCompatActivity {
     private Button btnSend;
 
     private FirebaseAuth mAuth;
+    private final String TAG = "Forgot";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot);
+        setTitle("Forgot Password?");
 
         //Initialize views
         etEmail = findViewById(R.id.et_forgot_email);
@@ -70,7 +72,9 @@ public class ForgotActivity extends AppCompatActivity {
                             }catch(FirebaseAuthUserCollisionException e) {
                                 Toast.makeText(ForgotActivity.this,
                                         "User doesn't exist", Toast.LENGTH_SHORT).show();
-                            }catch(Exception e){
+                            }catch(NullPointerException e){
+                                Log.d(TAG, "Null exception.");
+                            } catch(Exception e){
                                 Toast.makeText(ForgotActivity.this,
                                         "Authentication failed.", Toast.LENGTH_SHORT).show();
                             }

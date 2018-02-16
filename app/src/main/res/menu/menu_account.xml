@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.allen.workoutcalendar.CalendarActivity">
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_action_add"
+        android:title="@string/action_add"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_account"
+        android:orderInCategory="100"
+        android:title="@string/action_account"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_export"
+        android:orderInCategory="200"
+        android:title="@string/action_export"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_signOut"
+        android:orderInCategory="300"
+        android:title="@string/action_signOut"
+        app:showAsAction="never" />
+
+</menu>

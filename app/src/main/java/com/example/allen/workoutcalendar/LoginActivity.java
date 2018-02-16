@@ -29,12 +29,15 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogin;
     private Button btnRegister;
 
+    private String TAG = "Login";
+
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        setTitle("Login to Workout Calendar");
 
         //Initialize views
         etEmail = findViewById(R.id.et_login_email);
@@ -93,16 +96,20 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d("Login", "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            if(user.isEmailVerified()){
-                                Toast.makeText(LoginActivity.this, "Successful login for " + user.getUid(),
-                                        Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(LoginActivity.this,
-                                        MonthActivity.class));
-                            }else{
-                                Toast.makeText(LoginActivity.this, "Please verify your account with the email sent to " + user.getEmail(),
-                                        Toast.LENGTH_SHORT).show();
+                            Log.d(TAG, "signInWithEmail:success");
+                            try{
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                if(user.isEmailVerified()){
+                                    Toast.makeText(LoginActivity.this, "Successful login for " + user.getUid(),
+                                            Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(LoginActivity.this,
+                                            CalendarActivity.class));
+                                }else{
+                                    Toast.makeText(LoginActivity.this, "Please verify your account with the email sent to " + user.getEmail(),
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }catch(NullPointerException e){
+                                Log.d(TAG, "Null pointer exception");
                             }
 
                         } else {
@@ -118,7 +125,9 @@ public class LoginActivity extends AppCompatActivity {
                             }catch(FirebaseAuthUserCollisionException e) {
                                 Toast.makeText(LoginActivity.this,
                                         "User already exists", Toast.LENGTH_SHORT).show();
-                            }catch(Exception e){
+                            }catch(NullPointerException e) {
+                                Log.d(TAG, "Null pointer exception");
+                            }catch (Exception e){
                                 Toast.makeText(LoginActivity.this,
                                         "Authentication failed.", Toast.LENGTH_SHORT).show();
                             }
